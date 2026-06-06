@@ -1,5 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import userRoutes from './Routes/user.route.js'
 
 
 dotenv.config
@@ -7,6 +8,10 @@ dotenv.config
 
 const app = express();
 const PORT = process.env.PORT || 5000
+
+
+
+app.use("/api/users", userRoutes)
 
 
 
