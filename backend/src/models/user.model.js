@@ -14,10 +14,11 @@ const userSchema = new mongoose.Schema({
     },
     clerkId: {
         type: String,
+        required: true,
         unique: true
-    }
+    },
 
 }, { timestamps: true })
 
 
-const Usermodel = mongoose.model("User", userSchema)
+export const Usermodel = mongoose.model("User", userSchema)
