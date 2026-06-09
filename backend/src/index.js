@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 5000
 
 
 
-
+app.use(express.json());
+// to parse data req.body
 
 app.use("/api/users", userRoutes)
 // app.use("/api/auth", authRoutes)
