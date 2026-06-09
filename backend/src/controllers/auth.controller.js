@@ -1,4 +1,7 @@
 
+import { Usermodel } from "../models/user.model.js"
+
+
 export const authCallback = async (req, res) => {
 
     try {
