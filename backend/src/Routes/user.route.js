@@ -11,6 +11,7 @@ const router = Router()
 
 
 router.get("/", (req, res) => {
+    req.auth.userId
     res.send("hi")
 })
 
