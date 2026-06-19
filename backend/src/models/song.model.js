@@ -25,7 +25,7 @@ const songSchema = new mongoose.Schema({
         required: true
     },
     albumId: {
-        type: mongoose.Scehma.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Album',
         required: true
     }
