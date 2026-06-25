@@ -1,15 +1,8 @@
-import express from 'express'
+import { Router } from 'express'
+import { protectRoute } from '../middleware/auth.middleware.js'
 
 
-const router = express.Router()
+const router = router();
 
 
-
-router.get("/", (req, res) => {
-    req.auth.userId
-    res.send("hi")
-})
-
-
-
-export default router
+router.get("/", protectRoute, getAllUsers)
