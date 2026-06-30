@@ -1,7 +1,17 @@
-export default function App() {
+import { Routes, Route } from "react-router-dom";
+import { axiosInstance } from "./lib/utls";
+
+
+function App() {
+
+  // token => authorization heads 
+
+
+
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/auth-callback" element={<AuthCallbackPage />} />
+    </Routes>
   )
 }
